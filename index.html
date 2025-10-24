@@ -2,179 +2,156 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatic Random Website Redirection</title>
+    <title>Number List</title>
 </head>
 <body>
-    <h1>This page will automatically redirect to a random website after 1 second:</h1>
-
-    <script>
-        // Array of websites to choose from
-        const websites = [
-            
-'https://www.youtube.com/shorts/m7yGvf5_uKY',
-'https://www.youtube.com/shorts/c782AQN0J7c',
-'https://www.youtube.com/shorts/34AI-4m-VWU',
-'https://www.youtube.com/shorts/ZNZqKAMEM4M',
-'https://www.youtube.com/shorts/thBWM1Rt7hs',
-'https://www.youtube.com/shorts/294dy909Sqw',
-'https://www.youtube.com/shorts/qR4sDS6v9wA',
-'https://www.youtube.com/shorts/X8hNjXCXE3A',
-'https://www.youtube.com/shorts/YB7vRT2o7Sg',
-'https://www.youtube.com/shorts/p0OSIlNnvkc',
-'https://www.youtube.com/shorts/s3SopierheA',
-'https://www.youtube.com/shorts/Rwif6XGDTgs',
-'https://www.youtube.com/shorts/fyZeV1CE3uQ',
-'https://www.youtube.com/shorts/TglkkF-X8T0',
-'https://www.youtube.com/shorts/_7OqCwO0xrA',
-'https://www.youtube.com/shorts/Xgq-vsceE9c',
-'https://www.youtube.com/shorts/9QcnuI_r1vA',
-'https://www.youtube.com/shorts/HYuNRMYcE7U',
-'https://www.youtube.com/shorts/8RLHZr12vQY',
-'https://www.youtube.com/shorts/1vULhs2Xubs',
-'https://www.youtube.com/shorts/Yb18024ii74',
-'https://www.youtube.com/shorts/Mhke49C0Crs',
-'https://www.youtube.com/shorts/zbvqft64VbE',
-'https://www.youtube.com/shorts/v6oT_ibUsUU',
-'https://www.youtube.com/shorts/Zy514k6R4vI',
-'https://www.youtube.com/shorts/Ik7-tZ2Z3OY',
-'https://www.youtube.com/shorts/6XEprJxroIM',
-'https://www.youtube.com/shorts/ukQOprFwxs8',
-'https://www.youtube.com/shorts/hrngMfSaXKM',
-'https://www.youtube.com/shorts/BZjaCYak0KY',
-'https://www.youtube.com/shorts/e9iVrBU9658',
-'https://www.youtube.com/shorts/KaevViaWcWg',
-'https://www.youtube.com/shorts/zQhkVXeAG54',
-'https://www.youtube.com/shorts/DcjQLhB0tqY',
-'https://www.youtube.com/shorts/-nB-DvZWAuU',
-'https://www.youtube.com/shorts/CaEv9dEi3-M',
-'https://www.youtube.com/shorts/Si4kKhTN5i0',
-'https://www.youtube.com/shorts/EXkVpfFVUM4',
-'https://www.youtube.com/shorts/rXGYOJnm62E',
-'https://www.youtube.com/shorts/_qgnaxoiD_8',
-'https://www.youtube.com/shorts/qGhqEXEXZxA',
-'https://www.youtube.com/shorts/O5sLWCbH3ZQ',
-'https://www.youtube.com/shorts/F-GWS3z0mwo',
-'https://www.youtube.com/shorts/eOmslOmH8_M',
-'https://www.youtube.com/shorts/X4W1njZwjsc',
-'https://www.youtube.com/shorts/TJuxFmvzQ2c',
-'https://www.youtube.com/shorts/vLXFiDMOvAM',
-'https://www.youtube.com/shorts/DaF-uxznwLg',
-'https://www.youtube.com/shorts/Dbt8KFE55_U',
-'https://www.youtube.com/shorts/KO6VkAKG5oI',
-'https://www.youtube.com/shorts/NhVxvB7J6Sk',
-'https://www.youtube.com/shorts/28-BZO5aqag',
-'https://www.youtube.com/shorts/xPQFHV3C9xg',
-'https://www.youtube.com/shorts/oHW48ka9D9M',
-'https://www.youtube.com/shorts/gkMYpU7Ryno',
-'https://www.youtube.com/shorts/RqryFCkfq7E',
-'https://www.youtube.com/shorts/xvLk32sVnUI',
-'https://www.youtube.com/shorts/AwsJOBXVS0s',
-'https://www.youtube.com/shorts/6xjVh_irdDc',
-'https://www.youtube.com/shorts/hXRU1eifv64',
-'https://www.youtube.com/shorts/MINNbng0Fic',
-'https://www.youtube.com/shorts/bp3xfT1VlWc',
-'https://www.youtube.com/shorts/mTrhJaZmdno',
-'https://www.youtube.com/shorts/8-D21zfsTLs',
-'https://www.youtube.com/shorts/5_9icu-SoPI',
-'https://www.youtube.com/shorts/j0S7Vpom5oI',
-'https://www.youtube.com/shorts/bFN0u97pyxc',
-'https://www.youtube.com/shorts/RVmcX6eByqU',
-'https://www.youtube.com/shorts/fr9j-2Tcs5w',
-'https://www.youtube.com/shorts/5EzQ3-qG6M8',
-'https://www.youtube.com/shorts/f7J3hsqSD18',
-'https://www.youtube.com/shorts/PyR39C1KxU4',
-'https://www.youtube.com/shorts/mGLsGo7WCZo',
-'https://www.youtube.com/shorts/BLbBQekR-EQ',
-'https://www.youtube.com/shorts/EdYWsMsFKDY',
-'https://www.youtube.com/shorts/N5R2VDp207U',
-'https://www.youtube.com/shorts/BDcgaMszUQw',
-'https://www.youtube.com/shorts/7bTaQSDp7ls',
-'https://www.youtube.com/shorts/yj1PAgzWsfw',
-'https://www.youtube.com/shorts/D9V8Lj_ajkc',
-'https://www.youtube.com/shorts/hd0TgmQlgOg',
-'https://www.youtube.com/shorts/rsQFxUu0MQU',
-'https://www.youtube.com/shorts/ZH7rNOT_GOU',
-'https://www.youtube.com/shorts/g_SWWFcynqc',
-'https://www.youtube.com/shorts/J4Lp4eq6Wm4',
-'https://www.youtube.com/shorts/0KJGTzAsgQo',
-'https://www.youtube.com/shorts/QjN8EmKrnwI',
-'https://www.youtube.com/shorts/iGIkoYTAhRM',
-'https://www.youtube.com/shorts/5u1YvK_2OgI',
-'https://www.youtube.com/shorts/gNftgbMRxTY',
-'https://www.youtube.com/shorts/Qn3rPEPEvUU',
-'https://www.youtube.com/shorts/V4FiAHGJ0vI',
-'https://www.youtube.com/shorts/G6gc0gIPFPw',
-'https://www.youtube.com/shorts/5ujnLYRRm3A',
-'https://www.youtube.com/shorts/qdtlpE5d4Zs',
-'https://www.youtube.com/shorts/4up_gNsjJzI',
-'https://www.youtube.com/shorts/rabdHFmHFmg',
-'https://www.youtube.com/shorts/S9CnqL02Vws',
-'https://www.youtube.com/shorts/CpFSMbYKAzs',
-'https://www.youtube.com/shorts/o-AqAC8nT-Y',
-'https://www.youtube.com/shorts/1VtuUCci4L0',
-'https://www.youtube.com/shorts/LMuEYNobG0Y',
-'https://www.youtube.com/shorts/7P5LGPN1a4E',
-'https://www.youtube.com/shorts/Efkno4hACfA',
-'https://www.youtube.com/shorts/YTddPsNL4Zc',
-'https://www.youtube.com/shorts/gpFwfJCRYBc',
-'https://www.youtube.com/shorts/U9OCJ2oxcek',
-'https://www.youtube.com/shorts/X5mRJsYJlZ8',
-'https://www.youtube.com/shorts/bk124sNX9z8',
-'https://www.youtube.com/shorts/Eo3EXOwp7vs',
-'https://www.youtube.com/shorts/BlGIFHBsEMM',
-'https://www.youtube.com/shorts/p9SibHiyWgg',
-'https://www.youtube.com/shorts/bCEq0ZAhE6E',
-'https://www.youtube.com/shorts/625QMUQbLyY',
-'https://www.youtube.com/shorts/vZJx-czVLwI',
-'https://www.youtube.com/shorts/8XBfBVvX_Is',
-'https://www.youtube.com/shorts/ZfMS3wr7ovw',
-'https://www.youtube.com/shorts/wKa_EBqD0Io',
-'https://www.youtube.com/shorts/EI6D61txRS4',
-'https://www.youtube.com/shorts/Jgm0oGY2aFw',
-'https://www.youtube.com/shorts/pJ_dGaqQHmI',
-'https://www.youtube.com/shorts/nKnhACFQtAc',
-'https://www.youtube.com/shorts/53pQ2bTJU2Q',
-'https://www.youtube.com/shorts/eFMM4MDvLlg',
-'https://www.youtube.com/shorts/V7ZlUJrzHQ4',
-'https://www.youtube.com/shorts/5E97HvbO8Ho',
-'https://www.youtube.com/shorts/apdnZAO07QQ',
-'https://www.youtube.com/shorts/62gwOf16zzw',
-'https://www.youtube.com/shorts/9KeWoKsYNRQ',
-'https://www.youtube.com/shorts/LMlAmopbUrc',
-'https://www.youtube.com/shorts/RsexaGnIoRw',
-'https://www.youtube.com/shorts/K_mOJGZ9n0o',
-'https://www.youtube.com/shorts/Jcl8LnXyrbs',
-'https://www.youtube.com/shorts/f2EX3Lhg6ww',
-'https://www.youtube.com/shorts/vAJIMD0NH-I',
-'https://www.youtube.com/shorts/GDdapxf1izo',
-'https://www.youtube.com/shorts/NaFYrUDkJl4',
-'https://www.youtube.com/shorts/w1WjDftxW40',
-'https://www.youtube.com/shorts/Q0MX2I7uaOA',
-'https://www.youtube.com/shorts/MEmtvsg45AM',
-'https://www.youtube.com/shorts/wMjyGmogooI',
-'https://www.youtube.com/shorts/ntGQpyFajkY',
-'https://www.youtube.com/shorts/zBfK9SzlUsc',
-'https://www.youtube.com/shorts/289x2hjO9GA',
-'https://www.youtube.com/shorts/4BSKsB72hu8',
-'https://www.youtube.com/shorts/GD88rbR6Y1o',
-'https://www.youtube.com/shorts/ZuqUp71M_KA',
-'https://www.youtube.com/shorts/bRWloJ_qAKE',
-'https://www.youtube.com/shorts/kH4OeLOzu7w',
-'https://www.youtube.com/shorts/-CDS0Mn3M0Q',
-
-
-        ];
-
-        // Function to redirect to a random website
-        function redirectToRandomWebsite() {
-            const randomIndex = Math.floor(Math.random() * websites.length);
-            const randomWebsite = websites[randomIndex];
-            window.location.href = randomWebsite;
-        }
-
-        // Redirect automatically after 1 seconds
-        setTimeout(redirectToRandomWebsite, 1000); // 1000 milliseconds = 1 seconds
-    </script>
+    <h1>List of Numbers</h1>
+    <ul>
+        <li>John Traumer nuevas reglas para influencers en china</li>
+        <li>John Traumer y si el bullying no fuera tan malo</li>
+        <li>John Traumer Bukele prohibe decir todes</li>
+        <li>John Traumer Sheinbaum cambia las relgas del juego</li>
+        <li>John Traumer La mansion secreta de noroña</li>
+        <li>John Traumer La gran mentira sobre el rostro de miguel hidalgo</li>
+        <li>John Traumer peru vs mexico declararon sheinbaum non grata</li>
+        <li>John Traumer Videojuegos en mexico seran mas caros</li>
+        <li>John Traumer asi se hundio la CFE en el sexenio de amlo</li>
+        <li>John Traumer Capturan a vicealmirante por huachicol</li>
+        <li>John Traumer Viernes muy mexicano apoyo propaganda</li>
+        <li>John Traumer Kenia Lopez Rabadan robo camara morena</li>
+        <li>John Traumer Asi desaparecen millones en mexico</li>
+        <li>John Traumer el pleito mas caro de mexico</li>
+        <li>John Traumer pio lopez obrador absuelto</li>
+        <li>John Traumer acusan de traicion a lilly tellez</li>
+        <li>John Traumer ley japonesa que castiga a gordos</li>
+        <li>John Traumer miles estan huyendo de cfe internet</li>
+        <li>John Traumer el misterio de los medicos cubanos</li>
+        <li>John Traumer rommel pacheco heroe deportivo o depotismo</li>
+        <li>John Traumer Nuevo organismo bloquea el acceso a la informacion</li>
+        <li>John Traumer nuevo apoyo en cdmx realidad o truco </li>
+        <li>John Traumer ley en méxico cárcel a mamás por mentir sobre la paternidad</li>
+        <li>John Traumer influencers en huelganadie esperaba en 2025</li>
+        <li>John Traumer dictador en construcción bukele poder </li>
+        <li>John Traumer alito moreno robó a campeche las pruebas</li>
+        <li>John Traumer el hijo de amlo en hotel de lujo </li>
+        <li>John Traumer se puede salvar pemex de la quiebra</li>
+        <li>John Traumer del amor al odio murió la alianza trump musk</li>
+        <li>John Traumer sheinbaum contra eeuu por las remesas</li>
+        <li>John Traumer los papas más escandalosos de la historia</li>
+        <li>John Traumer la guerra del agua méxico vs estados unidos</li>
+        <li>John Traumer prohibir los corridos hace más daño que bien</li>
+        <li>John Traumer salinas pliego vs scjn el empresario más poderoso</li>
+        <li>John Traumer la  razón por la que todos odian a elon musk</li>
+        <li>John Traumer trump vs el mundo estados unidos  perdiendo guerra comercial</li>
+        <li>John Traumer los huevos tan caros ahora todos rentan gallinas</li>
+        <li>John Traumer la nueva ley anti chapulín que cambia la política</li>
+        <li>John Traumer ine da visto bueno al partido de verástegui</li>
+        <li>John Traumer querétaro prohibe redes sociales a menores</li>
+        <li>John Traumer sheinbaum rechaza plan de eeuu contra los carteles</li>
+        <li>John Traumer el escándalo crypto de milei fraude de 107 millones</li>
+        <li>John Traumer méxico abre sus puertas a tropas extranjeras</li>
+        <li>John Traumer estados unidos el salvador el negocio de las prisiones</li>
+        <li>John Traumer sheinbaum apuesta todo en este plan</li>
+        <li>John Traumer fofo márquez de influencer a preso</li>
+        <li>John Traumer emilia pérez indigna a méxico y divide al mundo</li>
+        <li>John Traumer fin del sueño americano para hijos de inmigrantes</li>
+        <li>John Traumer el golfo de méxico se convierte en el golfo de américa</li>
+        <li>John Traumer tiktok vs biden red social sacude la política estadounidense</li>
+        <li>John Traumer la promesa de sheinbaum fin de la escasez de medicamentos</li>
+        <li>John Traumer maduro liberar puerto rico con tropas de brasil</li>
+        <li>John Traumer olinia competir con tesla los autos eléctricos mexicanos</li>
+        <li>John Traumer espionaje digital siri activaba grabaciones </li>
+        <li>John Traumer méxico construye su propia red social</li>
+        <li>John Traumer escándalo del cybertruck aumentos de precio y fallas</li>
+        <li>John Traumer beast games reality show más caótico</li>
+        <li>John Traumer fin de los derechos trans así podría ser la presidencia de trump</li>
+        <li>John Traumer cómo afectará  nueva ley infonavit a trabajadores</li>
+        <li>John Traumer nuevo león vs méxico separación inevitable</li>
+        <li>John Traumer arbolito de navidad natural vs artificial</li>
+        <li>John Traumer gastar tanto dinero en salvar una catedral</li>
+        <li>John Traumer la virgen de guadalupe negocio millonario</li>
+        <li>John Traumer el plan secreto de trump para invadir a méxico</li>
+        <li>John Traumer salinas pliego pierde miles de millones qué pasó con elektra</li>
+        <li>John Traumer méxico responde a trump quién ganará la guerra comercial</li>
+        <li>John Traumer el pan a ser el partido más débil de méxico</li>
+        <li>John Traumer qué significa la desaparición del inai y otros organismos</li>
+        <li>John Traumer el fin del comercio entre canadá y méxico</li>
+        <li>John Traumer mega farmacia del bienestar de amlo es un mega fracaso</li>
+        <li>John Traumer marilyn cote la falsa psiquiatra </li>
+        <li>John Traumer congelamiento de créditos infonavit una solución </li>
+        <li>John Traumer tiendas del bienestar apoyo a comunidades</li>
+        <li>John Traumer cómo afectaría a mexicanos presidencia de trump</li>
+        <li>John Traumer corrupción en los tribunales las redes de nepotismo</li>
+        <li>John Traumer halloween día de muertos cuál es más importante</li>
+        <li>John Traumer el plan de elon musk para apoyar a trump en 2024</li>
+        <li>John Traumer está en crisis televisa la renuncia de azcárraga</li>
+        <li>John Traumer la decepción de la selección mexicana</li>
+        <li>John Traumer 38 años por traición genaro garcía luna </li>
+        <li>John Traumer descubre el plan de viviendas de sheinbaum que cambiará todo</li>
+        <li>John Traumer 225 kilómetros en una hora el nuevo tren</li>
+        <li>John Traumer trafico sexual en la música el caso de diddy</li>
+        <li>John Traumer el aumento salarial de sheinbaum destruir a las pequeñas empresas</li>
+        <li>John Traumer quién fue john d rockefeller</li>
+        <li>John Traumer quién fue cornelius vanderbilt</li>
+        <li>John Traumer quién fue andrew carnegie</li>
+        <li>John Traumer qué son los valores financieros </li>
+        <li>John Traumer qué es una recesión</li>
+        <li>John Traumer qué es el socialismo</li>
+        <li>John Traumer qué es el neoliberalismo</li>
+        <li>John Traumer qué es el mercado de divisas</li>
+        <li>John Traumer qué es el comunismo</li>
+        <li>John Traumer qué es el capitalismo</li>
+        <li>John Traumer qué es el anarquismo</li>
+        <li>John Traumer gentrificación airbnb regulación podría hundir a airbnb en cdmx</li>
+        <li>John Traumer aifa sorprende al mundo es premiado </li>
+        <li>John Traumer la ambición de sheinbaum podrá cumplir sus promesas</li>
+        <li>John Traumer qué oculta manuel bartlett el caso camarena</li>
+        <li>John Traumer sheinbaum dejó fuera al rey felipe vi</li>
+        <li>John Traumer el mayor error de putin guerra en ucrania</li>
+        <li>John Traumer amlo endeudó a méxico el lado oscuro de la deuda</li>
+        <li>John Traumer qué ganamos y perdimos con el parque ecológico texcoco</li>
+        <li>John Traumer brujería en la política mexicana los rituales de elba esther gordillo</li>
+        <li>John Traumer comen perros y gatos extrañas afirmaciones de trump </li>
+        <li>John Traumer el fin de adrián marcelo la historia de sus escándalos</li>
+        <li>John Traumer la nueva reforma judicial adiós a la independencia</li>
+        <li>John Traumer morena y el congreso un peligroso monopolio</li>
+        <li>John Traumer la conade le quita la beca a la medallista olímpica alejandra valencia</li>
+        <li>John Traumer la caída de natanael cano</li>
+        <li>John Traumer amlo vs poder judicial la controversia </li>
+        <li>John Traumer el financiamiento secreto amlo conexiones entre mcci y eeuu</li>
+        <li>John Traumer rocha moya el narco gobernador de morena en sinaloa</li>
+        <li>John Traumer injusticia olímpica osmar olvera menos dinero medallas</li>
+        <li>John Traumer la casa del dragón qué nos espera en la temporada 3</li>
+        <li>John Traumer sheinbaum invita a putin a méxico gesto diplomático o error político</li>
+        <li>John Traumer la polémica victoria de imane khelif en los juegos de parís</li>
+        <li>John Traumer fraude electoral en venezuela acusaciones contra maduro</li>
+        <li>John Traumer datos curiosos de las olimpiadas de francia 2024</li>
+        <li>John Traumer pandillas de migrantes y tuci amenaza calles de nueva york</li>
+        <li>John Traumer el primer huracán categría 6 la verdadera amenaza</li>
+        <li>John Traumer donald trump  volver a ser presidente</li>
+        <li>John Traumer el caos que está destruyendo a francia</li>
+        <li>John Traumer el prd está muerto podrá recuperarse</li>
+        <li>John Traumer estrella michelin para tacos controvertida decisión</li>
+        <li>John Traumer fraude electoral realmente claudia sheinbaum ganó</li>
+        <li>John Traumer morena domina méxico la aplastante victoria de sheinbaum</li>
+        <li>John Traumer traición o estrategia alejandra del moral deja el pri</li>
+        <li>John Traumer los trans son enfermos mentales</li>
+        <li>John Traumer xóchitl ganó el tercer debate</li>
+        <li>John Traumer el origen de la crisis eléctrica de méxico</li>
+        <li>John Traumer el fracaso de la nueva refineria de amlo</li>
+        <li>John Traumer sheinbaum ganó el segundo debate presidencial de méxico</li>
+        <li>John Traumer amlo toma el control de las afores</li>
+        <li>John Traumer fofo márquez tiene miedo de morir en prisión</li>
+        <li>John Traumer la crisis diplómatica de méxico contra ecuador</li>
+        <li>John Traumer el tren maya se descarrila</li>
+        <li>John Traumer precampañas en méxico fraude y  desperdicio de dinero </li>
+        <li>John Traumer temach el polémico influencer mexicano </li>
+        <li>John Traumer las sorpresas y desaires de los oscar 2024</li>
+        <li>John Traumer amlo planea eliminar organismos autónomos</li>
+        <li>John Traumer relación de elon musk y javier milei</li>
+        <li>John Traumer la mega farmacia del bienestar de amlo</li>
+        <li>John Traumer las controversias de dani flow</li>
+        <li>John Traumer la lista negra de jeffrey epstein</li>
+    </ul>
 </body>
 </html>
